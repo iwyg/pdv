@@ -1,8 +1,13 @@
 /**
  * Class: {{name}}
  *{{#interfaces}}
- * @see {{name}}{{/interfaces}}{{#parent}}
- * @see {{name}}{{/parent}}{{#abstract}}
+ * @implements {{name}}{{/interfaces}}{{#parent}}
+ * @uses {{name}}{{/parent}}{{#abstract}}
  * @abstract{{/abstract}}{{#final}}
  * @final{{/final}}
+ *
+ * @package 
+ * @version 
+ * @author Thomas Appel <mail@thomas-appel.com>
+ * @license MIT
  */

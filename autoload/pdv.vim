@@ -256,6 +256,8 @@ func! s:ParseBasicFunctionData(text)
 	let l:data["indent"] = l:matches[1]
 	let l:data["scope"] = s:GetScope(l:matches[2])
 	let l:data["static"] = s:GetStatic(l:matches[2])
+	let l:data["abstract"] = s:GetAbstract(l:matches[2])
+	let l:data["final"] = s:GetFinal(l:matches[2])
 	let l:data["name"] = l:matches[3]
 
 	return l:data
