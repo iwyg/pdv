@@ -46,6 +46,12 @@ let g:pdv_cfg_ReturnVal = "void"
 " Regular expressions 
 " 
 
+let g:pdv_cfg_CommentHead = "/**"
+let g:pdv_cfg_Comment1 = " * "
+let g:pdv_cfg_Commentn = " * "
+let g:pdv_cfg_CommentTail = " */"
+let g:pdv_cfg_CommentSingle = "//"
+
 let g:pdv_re_comment = ' *\*/ *'
 
 " (private|protected|public)
@@ -80,6 +86,21 @@ let g:pdv_re_indent = '^\s*'
 " Shortcuts for editing the text:
 let g:pdv_cfg_BOL = "norm! o"
 let g:pdv_cfg_EOL = ""
+
+" depr:
+" Options
+" :set paste before documenting (1|0)? Recommended.
+let g:pdv_cfg_paste = 1
+" Wether for PHP5 code PHP4 tags should be set, like @access,... (1|0)?
+let g:pdv_cfg_php4always = 1
+ 
+" Wether to guess scopes after PEAR coding standards:
+" $_foo/_bar() == <private|protected> (1|0)?
+let g:pdv_cfg_php4guess = 1
+
+" If you selected 1 for the last value, this scope identifier will be used for
+" the identifiers having an _ in the first place.
+let g:pdv_cfg_php4guessval = "protected"
 
 " }}}  
 

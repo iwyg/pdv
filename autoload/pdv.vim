@@ -57,7 +57,7 @@ let s:regex["param"] = ' *\([^ &]*\)\s*\(&\?\)\$\([^ =)]\+\)\s*\(=\s*\(.*\)\)\?$
 let s:regex["attribute"] = '^\(\s*\)\(\(private\s*\|public\s*\|protected\s*\|static\s*\)\+\)\s*\$\([^ ;=]\+\)[ =]*\(.*\);\?$'
 
 " [:spacce:]*(abstract|final|)[:space:]*(class|interface)+[:space:]+\(extends ([:identifier:])\)?[:space:]*\(implements ([:identifier:][, ]*)+\)?
-let s:regex["class"] = '^\(\s*\)\(\S*\)\s*\(interface\|class\)\s*\(\S\+\)\s*\([^{]*\){\?$'
+let s:regex["class"] = '^\(\s*\)\(\S*\)\s*\(interface\|class\|trait\)\s*\(\S\+\)\s*\([^{]*\){\?$'
 
 let s:regex["types"] = {}
 
@@ -259,6 +259,7 @@ func! s:ParseBasicFunctionData(text)
 	let l:data["abstract"] = s:GetAbstract(l:matches[2])
 	let l:data["final"] = s:GetFinal(l:matches[2])
 	let l:data["name"] = l:matches[3]
+	let l:data["rest"] = a:text
 
 	return l:data
 endfunc
